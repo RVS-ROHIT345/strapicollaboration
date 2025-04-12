@@ -3,7 +3,7 @@ module.exports = ({ env }) => {
 
   console.log("Using PORT:", port);
   console.log("Render PORT:", process.env.PORT);
-  console.log("Strapi env PORT:", env.get("PORT"));
+  console.log("Strapi env PORT:", env("PORT")); // ✅ Corrected this line
 
   return {
     host: env("HOST", "0.0.0.0"),
