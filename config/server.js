@@ -2,6 +2,8 @@ module.exports = ({ env }) => {
   const port = process.env.PORT || env.int("PORT", 1337); // Prefer Render's dynamic PORT
 
   console.log("Using PORT:", port);
+  console.log("Render PORT:", process.env.PORT);
+  console.log("Strapi env PORT:", env.get("PORT"));
 
   return {
     host: env("HOST", "0.0.0.0"),
