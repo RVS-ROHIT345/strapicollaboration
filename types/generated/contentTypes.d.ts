@@ -365,6 +365,7 @@ export interface AdminUser extends Schema.CollectionType {
 export interface ApiHomePageHomePage extends Schema.SingleType {
   collectionName: 'home_pages';
   info: {
+    description: '';
     displayName: 'Home Page';
     pluralName: 'home-pages';
     singularName: 'home-page';
@@ -383,6 +384,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     phone: Attribute.Integer;
     publishedAt: Attribute.DateTime;
     text: Attribute.String;
+    textField: Attribute.Text;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::home-page.home-page',
