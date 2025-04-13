@@ -374,6 +374,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
+    backgroundimage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::home-page.home-page',
